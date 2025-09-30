@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ABOUT ME PEAK</title>
+<style>
+    :root {
+      --bg:#144da8;
+      --card:#11357e;
+      --muted:#9aa4b2;
+      --accent:#7dd3fc;
+      --radius:14px;
+      font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+      color-scheme: dark;
+    }
+    
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      margin:0;
+      font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+      background: linear-gradient(180deg,#092c79 0%, #0b1220 100%);
+      color:#e6eef6;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+
+    a { text-decoration:none; color:var(--accent); }
+    .container { width: min(92%, 1100px); margin:auto; }
+
+   header {
+      position:sticky; top:0;
+      background:rgba(2,6,23,0.8);
+      backdrop-filter:blur(6px);
+      border-bottom:1px solid rgba(255,255,255,0.1);
+      z-index:10;
+    }
+    header .inner {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 20px;
+      max-width:1100px;
+      margin:auto;
+    }
+    header .brand { font-size:20px; font-weight:bold; color:var(--accent); }
+    nav ul { display:flex; list-style:none; gap:16px; }
+    nav a { color:#ccc; padding:6px 10px; border-radius:8px; }
+    nav a:hover { background:rgba(255,255,255,0.1); color:#fff; }
+    nav a.active {
+  color:#fff;
+  border-bottom:2px solid var(--accent); 
+  padding-bottom:4px; 
+}
+  
+    .hero {
+      display:grid; grid-template-columns:1fr 300px;
+      align-items:center; gap:5px;
+      padding:40px 0;
+    }
+    .hero h1 { font-size:clamp(30px,4vw,36px); margin-bottom:10px; }
+    .hero p { color:var(--muted); margin: bottom 30px;}
+    .btn {
+      display:inline-block; padding:10px 16px; border-radius:8px;
+      background:var(--accent); color:#001b26; font-weight:600;
+      margin-right:10px;
+    }
+    .btn.ghost { background:transparent; border:1px solid var(--accent); color:var(--accent); }
+
+    .hero img {
+      width: 85%; border-radius:30px; height: min-content;
+      object-fit:cover; box-shadow:0 30px 25px rgba(0,0,0,0.5);
+    }
+    .hero .nickname { font-size: 25px; color:var(--accent);}
+
+    section { padding:40px 0; }
+    h2 { font-size:24px; margin-bottom:16px; color:#ffffff; }
+    .about p { margin-bottom :10px; font-size: 25px; }
+
+
+    .projects-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:16px;
+    }
+    .project-card {
+      background:rgba(255,255,255,0.05); padding:12px;
+      border-radius:12px;
+    }
+    .project-card img { width:100%; border-radius:8px; margin-bottom:10px; }
+
+    .skills-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .skill { background:rgba(255,255,255,0.05); padding:14px; border-radius:12px; }
+    .progress { background:#333; border-radius:10px; height:10px; margin-top:8px; }
+    .progress div { background:var(--accent); height:100%; border-radius:10px; }
+
+    .contact-grid { display:grid; grid-template-columns:1fr 300px; gap:20px; }
+    .contact-form input, .contact-form textarea {
+      width:100%; padding:10px; margin-bottom:10px;
+      border-radius:8px; border:1px solid #444; background:transparent; color:#fff;
+    }
+
+    footer { text-align:center; padding:20px 0; color:var(--muted); border-top:1px solid rgba(255,255,255,0.1); margin-top:20px; }
+
+    
+    @media(max-width:768px){
+      .hero { grid-template-columns:1fr; text-align:center; }
+      .contact-grid { grid-template-columns:1fr; }
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container inner">
+      <div class="brand">ABOUT ME PEAK</div>
+      <nav>
+        <ul>
+          <li><a href="history.html"class="active">ประวัติ</a></li>
+          <li><a href="like.html"class="active">ความชอบ</a></li>
+          <li><a href="quiz.html"class="active">quiz</a></li>
+          <li><a href="contact.html"class="active">ติดต่อ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="home">
+      <div>
+        <h1>นายสิรภพ ราชบุตร</h1>
+        <p class="nickname"> ชื่อเล่น พีค |นักเรียนชั้น ม.6 | อายุ 18 ปี | เพศชาย</p>
+        
+      </div>
+      <div > 
+       <img src="รูป/โปรพีค.jpg" alt="โปรไฟล์พีค">
+      </div>
+      </section>
+
+    <section id="about" class="about">
+      <h2>เกี่ยวกับผม</h2>
+      <p>ปัจจุบันผมศึกษาอยู่ที่โรงเรียนแก่นนครวิทยาลัยชั้นม.6 โครงการวิทยาศาสตร์พลังสิบ</p>
+      <p>ผมสนใจในการเข้าศึกษาต่อที่มหาวิทยาลัยขอนแก่น คณะวิทการคอมพิวเตอร์สาขาวิชาเทคโนโลยีสารสนเทศและนวัตกรรมอัจฉริยะ </p>
+    </section>
+
+    <section id="projects">
+      <h2>ผลงานการสร้างเว็ปไซต์</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>โปรเจกต์ที่ 1</h3>
+          <p>เว็บแนะนำทีมฟุตซอลที่ผมทำบน Replit <br>ด้วยภาษาHTML & CSS</p>
+          <a href="https://e35efb2a-5fd6-414b-983c-1dc27a75e282-00-2fiz471i9oura.pike.replit.dev/" >คลิกที่นี้ลิ้งผลงาน</a>
+        </div>
+        <div class="project-card">
+          <h3>โปรเจกต์ที่ 2</h3>
+          <p>การทำเกมคำถามเกี่ยวกับผมเอง ทำบน Vistual studio code<br> ด้วยภาษาHTML & CSS </p>
+          <a href="" >คลิกที่นี้ลิ้งผลงาน</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>ทักษะ</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <h4>HTML & CSS</h4>
+          <div class="progress"><div style="width: 70%"></div></div>
+        </div>
+        <div class="skill">
+          <h4>ภาษาอังกฤษ</h4>
+          <div class="progress"><div style="width: 60%"></div></div>
+        </div>
+        <div class="skill">
+          <h4>คณิตศาสตร์</h4>
+          <div class="progress"><div style="width:50%"></div></div>
+        </div>
+        <div class="skill">
+          <h4>การใช้อุปกรณ์อิเล็กทรอนิกส์</h4>
+          <div class="progress"><div style="width:100%"></div></div>
+        </div>
+         <div class="skill">
+          <h4>ความคิดสร้างสรรค์</h4>
+          <div class="progress"><div style="width:100%"></div></div>
+        </div>
+        <div class="skill">
+          <h4>ความมุ่งมั่น</h4>
+          <div class="progress"><div style="width:100%"></div></div>
+      </div>
+    </section>
+
+    
+     
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> นายสิรภพ ราชบุตร</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+
+
+</body>
+</html>

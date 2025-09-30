@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ติดต่อ -ABOUT ME PEAK</title>
+  <style>
+    :root {
+      --bg:#144da8;
+      --card:#11357e;
+      --muted:#9aa4b2;
+      --accent:#7dd3fc;
+      --radius:14px;
+      font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+      color-scheme: dark;
+    }
+    * { box-sizing: border-box; margin:0; padding:0; }
+
+    body {
+      margin:0;
+      font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+      background: linear-gradient(180deg,#092c79 0%, #0b1220 100%);
+      color:#e6eef6;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+
+    
+    header {
+      position:sticky; top:0;
+      background:rgba(2,6,23,0.8);
+      backdrop-filter:blur(6px);
+      border-bottom:1px solid rgba(255,255,255,0.1);
+      z-index:10;
+    }
+    header .inner {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 20px;
+      max-width:1100px;
+      margin:auto;
+    }
+    header .brand { font-size:20px; font-weight:bold; color:var(--accent); }
+    nav ul { display:flex; list-style:none; gap:16px; }
+    nav a { color:#ccc; padding:6px 10px; border-radius:8px; }
+    nav a:hover { background:rgba(255,255,255,0.1); color:#fff; }
+    nav a.active {
+  color:#fff;
+  border-bottom:2px solid var(--accent); 
+  padding-bottom:4px; 
+}
+
+   
+    main {
+      flex:1;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px 20px;
+    }
+
+    .contact-box {
+      background:rgba(255,255,255,0.05);
+      padding:30px;
+      border-radius:16px;
+      width: min(90%, 500px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.4);
+      text-align:center;
+    }
+
+    .contact-box h2 {
+      margin-top:20px;
+      font-size:28px;
+      margin-bottom:16px;
+    }
+
+    .contact-info p {
+      margin:6px 0;
+      font-size:18px;
+    }
+
+    .contact-form {
+      margin-top:20px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+      width:100%;
+      padding:10px;
+      border-radius:8px;
+      border:1px solid #444;
+      background:transparent;
+      color:#fff;
+      font-size:16px;
+    }
+
+    .btn {
+      padding:10px;
+      border-radius:8px;
+      border:none;
+      background:#7dd3fc;
+      color:#001b26;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    .btn:hover {
+      background:#5ac9f7;
+    }
+
+    .back-btn {
+      display:inline-block;
+      margin-top:20px;
+      color:#7dd3fc;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    footer {
+      text-align:center;
+      padding:20px 0;
+      color:var(--muted);
+      border-top:1px solid rgba(255,255,255,0.1);
+      margin-top:auto;
+    }
+  </style>
+</head>
+<body>
+ 
+  <header>
+    <div class="inner">
+      <div class="brand">ABOUT ME PEAK</div>
+      <nav>
+        <ul>
+          <li><a href="index.html"class="active">หน้าหลัก</a></li>
+          <li><a href="history.html"class="active">ประวัติ</a></li>
+          <li><a href="like.html"class="active">ความชอบ</a></li>
+          <li><a href="quiz.html"class="active">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+ 
+  <main>
+    <div class="contact-box">
+      <div class="contact-info">
+        <p>EMAIL: 631s44224@knw.ac.th</p>
+        <p>INSTRAGRAM: peak_aloha</p>
+        <p>LINE: pumerpeakzess</p>
+      </div>
+
+      <h2>ติดต่อ</h2>
+
+      <form action="https://formspree.io/f/xgvnkrnb" method="POST" class="contact-form">
+  <input type="text" name="name" placeholder="ชื่อ" required>
+  <input type="email" name="email" placeholder="อีเมล" required>
+  <textarea name="message" rows="4" placeholder="ข้อความ..." required></textarea>
+  <button class="btn" type="submit">ส่งข้อความ</button>
+</form>
+
+      <a href="index.html" class="back-btn">⬅ กลับหน้าหลัก</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> นายสิรภพ ราชบุตร</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

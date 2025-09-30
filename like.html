@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ความชอบ -ABOUT ME PEAK</title>
+  <style>
+    :root {
+      --bg:#144da8;
+      --card:#11357e;
+      --muted:#9aa4b2;
+      --accent:#7dd3fc;
+      --radius:14px;
+      font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+      color-scheme: dark;
+    }
+    * { box-sizing: border-box; margin:0; padding:0; }
+
+    body {
+      background: linear-gradient(180deg,#092c79 0%, #0b1220 100%);
+      color:#e6eef6;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+
+   
+    header {
+      position:sticky; top:0;
+      background:rgba(2,6,23,0.8);
+      backdrop-filter:blur(6px);
+      border-bottom:1px solid rgba(255,255,255,0.1);
+      z-index:10;
+    }
+    header .inner {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 20px;
+      max-width:1100px;
+      margin:auto;
+    }
+    header .brand { font-size:20px; font-weight:bold; color:var(--accent); }
+    nav ul { display:flex; list-style:none; gap:16px; }
+    nav a {
+      color:#ccc;
+      padding:6px 10px;
+      border-radius:8px;
+      text-decoration:none;
+    }
+    nav a:hover { background:rgba(255,255,255,0.1); color:#fff; }
+    nav a.active {
+      color:#fff;
+      border-bottom:2px solid var(--accent);
+      padding-bottom:4px;
+    }
+
+   
+    main {
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:40px 20px;
+    }
+
+    h2 {
+      font-size:28px;
+      margin-bottom:20px;
+    }
+
+    .like-box {
+      background:rgba(255,255,255,0.05);
+      padding:20px;
+      border-radius:16px;
+      width:min(90%, 600px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.4);
+      margin-bottom:20px;
+      font-size:18px;
+      line-height:1.6;
+    }
+
+    footer {
+      text-align:center;
+      padding:20px 0;
+      color:var(--muted);
+      border-top:1px solid rgba(255,255,255,0.1);
+      margin-top:auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="inner">
+      <div class="brand">ABOUT ME PEAK</div>
+      <nav>
+        <ul>
+          <li><a href="index.html"class="active">หน้าหลัก</a></li>
+          <li><a href="history.html"class="active">ประวัติ</a></li>
+          <li><a href="quiz.html"class="active">Quiz</a></li>
+          <li><a href="contact.html"class="active">ติดต่อ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <h2>ความชอบของผม</h2>
+
+    <div class="like-box">
+      <h3>⚽ กีฬา</h3>
+      <p>ผมชอบเล่นฟุตซอลและฟุตบอล ทีมฟุตบอลที่ผมชอบคือ ลิเวอร์พูล นักเตะที่ผมชื่นชอบของผมคือ ลิโอเนล เมสซี่</p>
+    </div>
+
+    <div class="like-box">
+      <h3>🎵 ดนตรี</h3>
+      <p>ผมชอบฟังเพลงแนวเพื่อชีวิตให้กำลังใจในการใช้ชีวิต</p>
+    </div>
+
+    <div class="like-box">
+      <h3>🎮 เกม</h3>
+      <p>การเล่นเกมเป็นงานอดิเรกที่ทำให้สนุกและได้ฝึกทักษะการคิดวิเคราะห์ผมชอบเล่นเกม clash royale และ efootball</p>
+    </div>
+
+    <div class="like-box">
+      <h3>🍜 อาหาร</h3>
+      <p>ชอบกินก๋วยเตี๋ยวและข้าวผัดไม่ค่อยกิเผ็ดไม่ค่อยปรุง</p>
+    </div>
+    <div class="like-box">
+      <h3>💻 ภาษาโค้ด</h3>
+      <p>ผมชื่นชอบใช้ภาษาโค้ด HTML & CSS ผมมักจะใช้บนreplit และ vistual studio code</p>
+    </div>
+  </main>
+
+
+  <footer>
+    <p>© <span id="year"></span> นายสิรภพ ราชบุตร</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

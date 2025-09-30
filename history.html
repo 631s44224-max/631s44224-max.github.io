@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ประวัติ - ABOUT ME PEAK</title>
+  <style>
+    :root {
+      --bg:#144da8;
+      --card:#11357e;
+      --muted:#9aa4b2;
+      --accent:#7dd3fc;
+      --radius:14px;
+      font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+      color-scheme: dark;
+    }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      background: linear-gradient(180deg,#092c79 0%, #0b1220 100%);
+      color:#e6eef6;
+      line-height:1.6;
+      font-size:16px;
+    }
+    a { text-decoration:none; color:var(--accent); }
+    .container { width: min(92%, 1000px); margin:auto; }
+
+    header {
+      position:sticky; top:0;
+      background:rgba(2,6,23,0.8);
+      backdrop-filter:blur(6px);
+      border-bottom:1px solid rgba(255,255,255,0.1);
+      z-index:10;
+    }
+    header .inner {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 20px;
+    }
+    header .brand { font-size:30px; font-weight:bold; color:var(--accent); }
+    nav ul { display:flex; list-style:none; gap:16px; }
+    nav a { color:#ccc; padding:6px 10px; border-radius:8px; }
+    nav a:hover { background:rgba(255,255,255,0.1); color:#fff; }
+    nav a.active {
+  color:#fff;
+  border-bottom:2px solid var(--accent); 
+  padding-bottom:4px; 
+}
+
+    h1 { font: size 30px; margin:20px 0; color:#fff; text-align:center; }
+main {
+    flex: 1;
+     }
+    .history-box {
+      background:rgba(255,255,255,0.05);
+      border-radius:16px;
+      padding:20px;
+      margin-top:20px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .history-box p {
+  text-indent: 2em;   
+  margin-bottom: 14px; 
+  font-size: 20px;
+  line-height: 1.8;   
+
+  
+}
+
+    .btn {
+      display:inline-block; padding:10px 16px; border-radius:8px;
+      background:var(--accent); color:#001b26; font-weight:600;
+      margin-top:20px;
+    }
+    .btn:hover { background:#38bdf8; }
+    
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      max-width: 1000px;
+      margin: 0 auto
+    }
+
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border: 3px solid black;
+      border-radius: 8px;
+    }
+    
+
+    footer { text-align:center; padding:20px 0; color:var(--muted); border-top:1px solid rgba(255,255,255,0.1); margin-top:20px; }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container inner">
+      <div class="brand">ABOUT ME PEAK</div>
+      <nav>
+        <ul>
+          <li><a href="index.html"class="active">หน้าหลัก</a></li>
+          <li><a href="like.html"class="active">ความชอบ</a></li>
+          <li><a href="quiz.html"class="active">quiz</a></li>
+          <li><a href="contact.html"class="active">ติดต่อ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>ประวัติ</h1>
+    <div class="history-box">
+      <p>
+        ผมมีชื่อจริงว่า นายสิรภพ ราชบุตร ชื่อเล่นว่า พีค ปัจจุบันมีอายุ 18 ปี เกิดเมื่อวันที่ 12 กรกฎาคม พ.ศ.2550 ผมเกิดและเติบโตในจังหวัดขอนแก่น 
+        เริ่มศึกษาที่โรงเรียนอนุบาลสวนสนเมื่อตอนอนุบาล 2 จนถึงประถมศึกษา 6 และได้ต่อมัธยมศึกษา 1 ที่โรงเรียนแก่นนครวิทยาลัยในโครงความสามารถพิเศษทางคณิตศาสตร์และวิทยาศาสตร์จนถึงมัธยมศึกษา 3
+        และได้ศึกษาต่อมัธยมศึกษา 4 ที่โรงเรียนแก่นนครวิทยาลัยเช่นเดิมในโครงการวิทยาศาสตร์พลังสิบจนถึงมัธยมศึกษา 6 ในปัจจุบัน นอกจากที่เป็นนักเรียนในโรงเรียนแล้วผมยังเป็นนักศึกษาวิชาทหาร
+        ปัจจุบันศึกษาอยูปีที่ 3 ที่ มทบ.23
+
+      </p>
+    </div>
+    
+    <div class="gallery">
+      <img src="รูป/หิมะกลุ่มกิ้ฟ.jpg" alt="รูปที่ 1">
+      <img src="รูป/รด.jpg" alt="รูปที่ 2">
+      
+
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> นายสิรภพ ราชบุตร</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
