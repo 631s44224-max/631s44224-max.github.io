@@ -91,7 +91,20 @@ main {
     
 
     footer { text-align:center; padding:20px 0; color:var(--muted); border-top:1px solid rgba(255,255,255,0.1); margin-top:20px; }
+@media(max-width:768px){
+  nav ul {
+    flex-direction: row; 
+    justify-content: center;
+    gap: 10px; 
+    flex-wrap: wrap; /* ถ้าจอเล็กมากจะตัดบรรทัด */
+  }
 
+  nav a {
+    font-size: 14px; 
+    padding: 8px 12px; 
+  }
+}
+    
   </style>
 </head>
 <body>
@@ -138,4 +151,5 @@ main {
 </body>
 
 </html>
+
 
